@@ -70,7 +70,7 @@ Now we want to **pin our data** to RStudio Connect.
 _Before you run this code chunk_: Update the `name = "mydata"` parameter to give your pin a unique name identifier on the server.
 
 ```{r}
-pins::pin(beaver1, name = "mydata", description = "Beaver Body Temperature Measurements", board = "rsconnect")
+pins::pin_write(beaver1, name = "thomas/beaverData", description = "Beaver Body Temperature Measurements", board = "rsconnect")
 ```
 
 Take a moment to switch to the RStudio Connect content dashboard and give yourself a pat on the back. **Your data is now pinned!**
@@ -112,10 +112,10 @@ pins::board_register_rsconnect(
 )
 
 # Retrieve Pin
-# beaver_data <- pin_get("your/pin", board = "rsconnect")
+pinned_beaver_data <- pin_read("thomas/beaverData", board = "rsconnect")
   
 # View the pin locally
-# head(beaver_data)
+head(pinned_beaver_data)
 ```
 
 Jackpot! We have our data.

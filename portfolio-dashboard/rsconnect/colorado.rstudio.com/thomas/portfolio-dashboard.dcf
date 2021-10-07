@@ -1,0 +1,13 @@
+name: portfolio-dashboard
+title: portfolio-dashboard
+username: thomas
+account: thomas
+server: colorado.rstudio.com
+hostUrl: https://colorado.rstudio.com/rsc/__api__
+appId: 10005
+bundleId: 48975
+url: https://colorado.rstudio.com/rsc/content/1ad44075-74b5-4c2f-bc5c-0199551b7f31/
+when: 1633578338.88722
+lastSyncTime: 1633578338.88724
+asMultiple: FALSE
+asStatic: FALSE
