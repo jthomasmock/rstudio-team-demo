@@ -61,7 +61,7 @@ meta() %>%
       "Using R and Python in your organization doesn't need to be hard!",
       "RStudio Team can make life easier and your data science team more productive."
     ),
-    url = "https://colorado.rstudio.com/rsc/plumbertableau-prez",
+    url = "https://colorado.rstudio.com/rsc/rstudio-team-prez/",
     image = "https://user-images.githubusercontent.com/29187501/136310162-f7810e27-e929-4903-aa5d-8e29d3749555.png",
     image_alt = paste(
       "Title slide of 'RStudio Team, a single home for R and Python Data Science Teams'.", 
@@ -249,12 +249,6 @@ background-image: url("https://raw.githubusercontent.com/jthomasmock/rstudio-tea
 background-position: center
 background-size: contain
 
-<!-- --- -->
-
-<!-- background-image: url("images/sds-6.png") -->
-<!-- background-position: center -->
-<!-- background-size: contain -->
-
 ---
 
 background-image: url("https://raw.githubusercontent.com/jthomasmock/rstudio-team-demo/master/images/sds-7.png")
@@ -371,8 +365,18 @@ class: inverse, center, middle
 > <span style = 'font-size:150%;'>Create free and open-source software for data science, scientific research, and technical communication</span>
 
 * Allows anyone with access to a computer to participate freely in a data-centric global economy  
+
 * Enhances the production and consumption of knowledge  
+
 * Facilitates collaboration and reproducible research in science, education and industry  
+
+--
+
+* More than 50% of our engineering resources go to Open Source Software (OSS)  
+
+* Revenue from our Pro Products funds ongoing OSS, so that we can achieve our mission  
+
+* Additionally, RStudio contributes to organizations like [NumFOCUS](https://numfocus.org/sponsors) at the Platinum level to further extend our impact  
 
 ---
 
@@ -422,3 +426,4 @@ background-size: contain
 
 * [Evaluate RStudio Team](https://www.rstudio.com/products/team/evaluation/) today!
 
+---
