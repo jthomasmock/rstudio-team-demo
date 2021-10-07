@@ -1,0 +1,53 @@
+---
+output: html_document
+---
+
+# Stock Report: TSLA
+
+```{r, include = FALSE}
+library(reticulate)
+reticulate::use_python(Sys.getenv("RETICULATE_PYTHON"))
+```
+
+
+## Summary
+
+```{python}
+import datetime
+import gzip
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+prices = pd.read_json(gzip.open('quandl-wiki-tsla.json.gz'), orient='split')
+
+data=[
+    [
+        prices.last('1d')['High'].values[0],
+        prices.last('1d')['Low'].values[0],
+        prices.last('1d')['Volume'].values[0].round(),
+    ],
+    [
+        prices.asfreq('D').rolling(window=52*7, min_periods=1).max().last('1d')['High'].values[0],
+        prices.asfreq('D').rolling(window=52*7, min_periods=1).min().last('1d')['Low'].values[0],
+        prices.asfreq('D').rolling(window=52*7, min_periods=1).mean().last('1d')['Volume'].values[0].round(),
+    ]
+]
+
+pd.DataFrame(data, columns=['High', 'Low', 'Avg Volume'], index=['Most Recent Trading Day', '52-Week/Year'])
+```
+
+## History
+
+```{python}
+plt.rcParams['figure.figsize'] = [15, 10]
+prices['Adj. Close'].plot(grid=True)
+plt.show()
+```
+
+## Raw Data
+
+```{python}
+prices
+```
+

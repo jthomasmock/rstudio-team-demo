@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>RStudio Team</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Tom Mock" />
+    <meta name="date" content="2021-10-07" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <meta name="github-repo" content="rstudio/jthomasmock/rstudio-team-demo"/>
+    <meta name="twitter:title" content="RStudio Team, a single home for R and Python Data Science Teams"/>
+    <meta name="twitter:description" content="Using R and Python in your organization doesn&#39;t need to be hard! RStudio Team can make life easier and your data science team more productive."/>
+    <meta name="twitter:url" content="https://colorado.rstudio.com/rsc/plumbertableau-prez"/>
+    <meta name="twitter:image" content="https://user-images.githubusercontent.com/29187501/136310162-f7810e27-e929-4903-aa5d-8e29d3749555.png"/>
+    <meta name="twitter:image:alt" content="Title slide of &#39;RStudio Team, a single home for R and Python Data Science Teams&#39;. A slide deck covering the details of RStudio Team."/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:creator" content="@thomas_mock"/>
+    <meta name="twitter:site" content="@thomas_mock"/>
+    <meta property="og:title" content="RStudio Team, a single home for R and Python Data Science Teams"/>
+    <meta property="og:description" content="Using R and Python in your organization doesn&#39;t need to be hard! RStudio Team can make life easier and your data science team more productive."/>
+    <meta property="og:url" content="https://colorado.rstudio.com/rsc/plumbertableau-prez"/>
+    <meta property="og:image" content="https://user-images.githubusercontent.com/29187501/136310162-f7810e27-e929-4903-aa5d-8e29d3749555.png"/>
+    <meta property="og:image:alt" content="Title slide of &#39;RStudio Team, a single home for R and Python Data Science Teams&#39;. A slide deck covering the details of RStudio Team."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="article:author" content="Tom Mock"/>
+    <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/my-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="css/cols.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+class: title-slide, left, top
+
+# &lt;span style='color:#404040;'&gt;RStudio Team&lt;/span&gt;
+
+### &lt;span style='color:#404040;'&gt;A single home for R &amp; Python&lt;br&gt;Data Science Teams&lt;/span&gt;
+
+&lt;br&gt;
+
+### &lt;span style='color:#404040;'&gt;Tom Mock&lt;/span&gt;
+
+#### &lt;span style='color:#404040;'&gt;2021-10-07&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;span style='color:#404040; font-size:70%;'&gt;Slides: colorado.rstudio.com/rsc/rstudio-team-prez&lt;/span&gt;  
+
+&lt;div style = "position: absolute;top: 0px;right: -50px;"&gt;&lt;img src="https://user-images.githubusercontent.com/29187501/136305899-6e271bca-b696-4a56-af18-770ae56b3f6f.png" alt="The logo for RStudio Team" height="700"&gt;&lt;/img&gt;&lt;/div&gt;
+
+---
+
+layout: true
+
+&lt;div class="my-footer"&gt;&lt;span&gt;https://colorado.rstudio.com/rsc/rstudio-team-prez&lt;/span&gt;&lt;/div&gt;
+
+---
+class: inverse, center, middle
+
+# HARD TRUTH
+
+--
+
+## Many data science teams fail to&lt;br&gt;live up to their promises
+
+---
+
+### Data science teams find it difficult to
+
+
+![:col_header Create insights, Impact decision making, Maintain &amp; improve over time]
+
+--
+
+![:col_list Recruit data scientists to use proprietary tools or difficult to connect to data sources, Stakeholders don’t understand insights or endure long waits for “What if?” questions, Difficult to build on previous work for new use cases]
+&lt;br&gt;
+
+--
+
+![:col_list Analysis constraints or delays imposed by tools, Slow iteration hinders alignment which leads to irrelevant or outdated insights, Insights become obsolete or difficult to reproduce analyses]
+
+&lt;br&gt;
+
+--
+
+![:col_list  Siloed teams lead to redundant work and lack of collaboration with too much time spent maintaining tools, Team can’t easily deploy self-serve apps or spend too much time manually rerunning analyses, Too much manual effort to deploy/maintain or rerun analyses]
+
+---
+
+### Key elements of Serious Data Science
+
+![:col_header Open Source, Code First, Centralized/Cloud]
+
+--
+
+![:col_list Widely used: eases recruiting and retention/training, Flexible: No black box and access/combine all your data, Reduces unnecessary work while enhancing collaboration]
+
+&lt;br&gt;
+
+--
+
+![:col_list Comprehensive: based on community contributions, Fast iteration and updates, Deployment provides stakeholders self-service access and drives alignment]
+
+&lt;br&gt;
+
+--
+
+![:col_list Interoperable: break down analytic silos and minimizes vendor lock-in, Reusable and fully extensible/inspectable, Package management supports reproducibility and eases admin]
+
+---
+
+.pull-left[
+
+### Serious Data Science
+
+&lt;img src="table.png" width="50%" /&gt;
+
+### Leading Languages
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;svg viewBox="0 0 581 512" style="position:relative;display:inline-block;top:.1em;fill:#5782b3;height:3em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"&gt;&lt;/path&gt;&lt;/svg&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;svg viewBox="0 0 448 512" style="position:relative;display:inline-block;top:.1em;fill:#5782b3;height:3em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"&gt;&lt;/path&gt;&lt;/svg&gt;
+
+]
+
+--
+
+.pull-right[
+
+&lt;br&gt;
+
+### RStudio Workbench
+
+Analyze data and create insights using R/Python
+
+### RStudio Connect
+
+Share insights with decision makers via web apps, email, APIs, and more
+
+### RStudio Package Manager
+
+Control and manage packages that data scientists need to create and share insights
+
+]
+
+&lt;!-- --- --&gt;
+
+&lt;!-- class: center, middle --&gt;
+
+&lt;!-- ```{r, echo = FALSE, out.width = "80%"} --&gt;
+&lt;!-- knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/33df976d95c3b9e44e85c9e77b5ca62b7809db85/9caa3/assets/img/rst-full.png") --&gt;
+&lt;!-- ``` --&gt;
+
+---
+
+background-image: url("images/sds-1.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/sds-2.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/sds-3.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/sds-4.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/sds-5.png")
+background-position: center
+background-size: contain
+
+&lt;!-- --- --&gt;
+
+&lt;!-- background-image: url("images/sds-6.png") --&gt;
+&lt;!-- background-position: center --&gt;
+&lt;!-- background-size: contain --&gt;
+
+---
+
+background-image: url("images/sds-7.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/sds-8.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/sds-9.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/sds-10.png")
+background-position: center
+background-size: contain
+
+---
+
+### RStudio Reviews on [TrustRadius.com](https://www.trustradius.com/products/rstudio/reviews)
+
+#### Verified Anonymous
+
+&gt; “I am more of a python user so I have a mixture of dash, flask and jupyter notebooks on RStudio. I like it because I don't have to configure a server in order to run dash or flask. I just upload and it works.”
+
+--
+
+#### Carlos C., BI and Pricing Manager
+
+&gt; “RStudio products are great for technical teams / team members. The integration of both R and Python in a single product allows developers to make use of their preferred language for data analysis.”
+
+--
+
+#### Jeff K., Lead Data Scientist
+
+&gt; “We use RStudio Connect as a publishing platform for R and Python documents, apps, and APIs. It provides us with a professional, clean looking interface to share our work with internal clients and stakeholders.”
+
+
+---
+
+background-image: url("images/rstudio-1.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/rstudio-2.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/rstudio-3.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/rstudio-4.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/rstudio-5.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/rstudio-6.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/rstudio-7.png")
+background-position: center
+background-size: contain
+
+---
+
+class: inverse, center, middle
+
+# What makes RStudio different?
+
+---
+
+## Our Mission
+
+&lt;span style = 'font-style: italic; font-size:150%;'&gt;Create free and open-source software for data science, scientific research, and technical communication&lt;/span&gt;
+
+* Allows anyone with access to a computer to participate freely in a data-centric global economy  
+* Enhances the production and consumption of knowledge  
+* Facilitates collaboration and reproducible research in science, education and industry  
+
+---
+
+class: middle
+background-image: url("images/pbc.png")
+background-position: top
+background-size: contain
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+## &lt;span style="color:white;"&gt;Public Benefit Corporation&lt;/span&gt;
+
+&lt;span style="color:white;"&gt;Open source mission codified into our charter.&lt;/span&gt;  
+
+&lt;span style="color:white;"&gt;Corporate decisions must balance the best interests of&lt;br&gt;community, customers, employees, and shareholders.&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;span style="color:white; font-size: 75%;"&gt;J.J. Allaire CEO, RStudio [rstudio.com/pbc-keynote](http://rstudio.com/pbc-keynote)&lt;/span&gt;  
+&lt;span style="color:white; font-size: 75%;"&gt;Details of Certified B Corporation assessment at [https://bcorporation.net/directory/rstudio](https://bcorporation.net/directory/rstudio)&lt;/span&gt;
+
+---
+
+### Want to learn more?
+
+* Read all about [Serious Data Science](https://www.rstudio.com/solutions/serious-data-science/) and [RStudio Team](https://www.rstudio.com/products/team/)  
+
+--
+
+### Want to know what actual RStudio Team users think?
+
+* Read our reviews at [Trust Radius](https://www.trustradius.com/products/rstudio/reviews?rk=1&amp;utm_campaign=tqw&amp;utm_medium=widget&amp;utm_source=colorado.rstudio.com/rsc/rstudio-team-prez&amp;trtid=dedc26eb-d6ce-4d2a-b901-40d45a941d52)  
+
+--
+
+### Want to chat and get specific questions answered?
+
+* [Book a live meeting](https://rstudio.chilipiper.com/book/schedule-time-with-rstudio) with us!
+
+--
+
+### Want to try it out, no strings attached?
+
+* [Evaluate RStudio Team](https://www.rstudio.com/products/team/evaluation/) today!
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="css/cols_macro.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "dracula",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

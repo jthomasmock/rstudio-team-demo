@@ -1,0 +1,408 @@
+---
+title: "RStudio Team"
+subtitle: "A single home for R & Python<br>Data Science Teams"
+author: "Tom Mock"
+date: "`r Sys.Date()`"
+resource_files:
+  - css/my-fonts.css
+  - css/my-theme.css
+  - css/cols.css
+  - css/cols_macro.js
+  - images/pbc.png
+  - images/rstudio-1.png
+  - images/rstudio-2.png
+  - images/rstudio-3.png
+  - images/rstudio-4.png
+  - images/rstudio-5.png
+  - images/rstudio-6.png
+  - images/rstudio-7.png
+  - images/sds-1.png
+  - images/sds-2.png
+  - images/sds-3.png
+  - images/sds-4.png
+  - images/sds-5.png
+  - images/sds-6.png
+  - images/sds-7.png
+  - images/sds-8.png
+  - images/sds-9.png
+  - images/sds-10.png
+  - images/table.png
+output:
+  xaringan::moon_reader:
+    self_contained: false
+    css: ["default", "css/my-theme.css", "css/my-fonts.css", "css/cols.css"]
+    seal: false
+    lib_dir: libs
+    nature:
+      beforeInit: "css/cols_macro.js"
+      ratio: '16:9'
+      highlightStyle: dracula
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE,
+        eval = TRUE)
+library(tidyverse)
+library(htmltools)
+library(icons)
+library(gt)
+```
+
+
+```{r metathis, echo=FALSE}
+library(metathis)
+meta() %>%
+  meta_name("github-repo" = "rstudio/jthomasmock/rstudio-team-demo") %>% 
+  meta_social(
+    title = "RStudio Team, a single home for R and Python Data Science Teams",
+    description = paste(
+      "Using R and Python in your organization doesn't need to be hard!",
+      "RStudio Team can make life easier and your data science team more productive."
+    ),
+    url = "https://colorado.rstudio.com/rsc/plumbertableau-prez",
+    image = "https://user-images.githubusercontent.com/29187501/136310162-f7810e27-e929-4903-aa5d-8e29d3749555.png",
+    image_alt = paste(
+      "Title slide of 'RStudio Team, a single home for R and Python Data Science Teams'.", 
+      "A slide deck covering the details of RStudio Team."
+    ),
+    og_type = "website",
+    og_author = "Tom Mock",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@thomas_mock",
+    twitter_site = "@thomas_mock"
+  )
+```
+
+class: title-slide, left, top
+
+# <span style='color:#404040;'>`r rmarkdown::metadata$title`</span>
+
+### <span style='color:#404040;'>`r rmarkdown::metadata$subtitle`</span>
+
+<br>
+
+### <span style='color:#404040;'>`r rmarkdown::metadata$author`</span>
+
+#### <span style='color:#404040;'>`r Sys.Date()`</span>
+
+<br>
+
+<span style='color:#404040; font-size:70%;'>Slides: colorado.rstudio.com/rsc/rstudio-team-prez</span>  
+
+<div style = "position: absolute;top: 0px;right: -50px;"><img src="https://user-images.githubusercontent.com/29187501/136305899-6e271bca-b696-4a56-af18-770ae56b3f6f.png" alt="The logo for RStudio Team" height="700"></img></div>
+
+---
+
+layout: true
+
+<div class="my-footer"><span>https://colorado.rstudio.com/rsc/rstudio-team-prez</span></div>
+
+---
+class: inverse, center, middle
+
+# HARD TRUTH
+
+--
+
+## Many data science teams fail to<br>live up to their promises
+
+---
+
+### Data science teams find it difficult to
+
+
+![:col_header Create insights, Impact decision making, Maintain & improve over time]
+
+--
+
+![:col_list Recruit data scientists to use proprietary tools or difficult to connect to data sources, Stakeholders don’t understand insights or endure long waits for “What if?” questions, Difficult to build on previous work for new use cases]
+<br>
+
+--
+
+![:col_list Analysis constraints or delays imposed by tools, Slow iteration hinders alignment which leads to irrelevant or outdated insights, Insights become obsolete or difficult to reproduce analyses]
+
+<br>
+
+--
+
+![:col_list  Siloed teams lead to redundant work and lack of collaboration with too much time spent maintaining tools, Team can’t easily deploy self-serve apps or spend too much time manually rerunning analyses, Too much manual effort to deploy/maintain or rerun analyses]
+
+---
+
+### Key elements of Serious Data Science
+
+![:col_header Open Source, Code First, Centralized/Cloud]
+
+--
+
+![:col_list Widely used: eases recruiting and retention/training, Flexible: No black box and access/combine all your data, Reduces unnecessary work while enhancing collaboration]
+
+<br>
+
+--
+
+![:col_list Comprehensive: based on community contributions, Fast iteration and updates, Deployment provides stakeholders self-service access and drives alignment]
+
+<br>
+
+--
+
+![:col_list Interoperable: break down analytic silos and minimizes vendor lock-in, Reusable and fully extensible/inspectable, Package management supports reproducibility and eases admin]
+
+---
+
+.pull-left[
+
+### Serious Data Science
+
+```{r, echo = FALSE, out.width = "50%"}
+tab_out <- tibble(
+  ic = c("box-open", "code", "server"),
+  text = c("Open Source", "Code First", "Centralized/Cloud")
+) %>% 
+  gt() %>% 
+  text_transform(
+    locations = cells_body(ic), 
+    fn = function(x){
+      lapply(x, function(xy){
+        fontawesome::fa(xy, height = "50px", fill = "#5782b3")
+      })
+    }) %>% 
+  cols_align("center") %>% 
+  cols_label(ic = "", text = "") %>% 
+  tab_options(
+    column_labels.border.bottom.color = "white",
+    table.border.bottom.color = "white",
+    table.border.top.color = "white",
+    table.border.bottom.width = px(3),
+    table.border.top.width = px(3)
+  ) %>% 
+  gtsave("table.png")
+
+knitr::include_graphics("table.png")
+```
+
+### Leading Languages
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `r icon_style(fontawesome$brands$"r-project", scale = 3, fill = "#5782b3")` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `r icon_style(fontawesome$brands$"python", scale = 3, fill = "#5782b3")`
+
+]
+
+--
+
+.pull-right[
+
+<br>
+
+### RStudio Workbench
+
+Analyze data and create insights using R/Python
+
+### RStudio Connect
+
+Share insights with decision makers via web apps, email, APIs, and more
+
+### RStudio Package Manager
+
+Control and manage packages that data scientists need to create and share insights
+
+]
+
+<!-- --- -->
+
+<!-- class: center, middle -->
+
+<!-- ```{r, echo = FALSE, out.width = "80%"} -->
+<!-- knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/33df976d95c3b9e44e85c9e77b5ca62b7809db85/9caa3/assets/img/rst-full.png") -->
+<!-- ``` -->
+
+---
+
+background-image: url("images/sds-1.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/sds-2.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/sds-3.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/sds-4.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/sds-5.png")
+background-position: center
+background-size: contain
+
+<!-- --- -->
+
+<!-- background-image: url("images/sds-6.png") -->
+<!-- background-position: center -->
+<!-- background-size: contain -->
+
+---
+
+background-image: url("images/sds-7.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/sds-8.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/sds-9.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/sds-10.png")
+background-position: center
+background-size: contain
+
+---
+
+### RStudio Reviews on [TrustRadius.com](https://www.trustradius.com/products/rstudio/reviews)
+
+#### Verified Anonymous
+
+> “I am more of a python user so I have a mixture of dash, flask and jupyter notebooks on RStudio. I like it because I don't have to configure a server in order to run dash or flask. I just upload and it works.”
+
+--
+
+#### Carlos C., BI and Pricing Manager
+
+> “RStudio products are great for technical teams / team members. The integration of both R and Python in a single product allows developers to make use of their preferred language for data analysis.”
+
+--
+
+#### Jeff K., Lead Data Scientist
+
+> “We use RStudio Connect as a publishing platform for R and Python documents, apps, and APIs. It provides us with a professional, clean looking interface to share our work with internal clients and stakeholders.”
+
+
+---
+
+background-image: url("images/rstudio-1.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/rstudio-2.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/rstudio-3.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/rstudio-4.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/rstudio-5.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/rstudio-6.png")
+background-position: center
+background-size: contain
+
+---
+
+background-image: url("images/rstudio-7.png")
+background-position: center
+background-size: contain
+
+---
+
+class: inverse, center, middle
+
+# What makes RStudio different?
+
+---
+
+## Our Mission
+
+<span style = 'font-style: italic; font-size:150%;'>Create free and open-source software for data science, scientific research, and technical communication</span>
+
+* Allows anyone with access to a computer to participate freely in a data-centric global economy  
+* Enhances the production and consumption of knowledge  
+* Facilitates collaboration and reproducible research in science, education and industry  
+
+---
+
+class: middle
+background-image: url("images/pbc.png")
+background-position: top
+background-size: contain
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## <span style="color:white;">Public Benefit Corporation</span>
+
+<span style="color:white;">Open source mission codified into our charter.</span>  
+
+<span style="color:white;">Corporate decisions must balance the best interests of<br>community, customers, employees, and shareholders.</span>
+
+<br>
+
+<span style="color:white; font-size: 75%;">J.J. Allaire CEO, RStudio [rstudio.com/pbc-keynote](http://rstudio.com/pbc-keynote)</span>  
+<span style="color:white; font-size: 75%;">Details of Certified B Corporation assessment at [https://bcorporation.net/directory/rstudio](https://bcorporation.net/directory/rstudio)</span>
+
+---
+
+### Want to learn more?
+
+* Read all about [Serious Data Science](https://www.rstudio.com/solutions/serious-data-science/) and [RStudio Team](https://www.rstudio.com/products/team/)  
+
+--
+
+### Want to know what actual RStudio Team users think?
+
+* Read our reviews at [Trust Radius](https://www.trustradius.com/products/rstudio/reviews?rk=1&utm_campaign=tqw&utm_medium=widget&utm_source=colorado.rstudio.com/rsc/rstudio-team-prez&trtid=dedc26eb-d6ce-4d2a-b901-40d45a941d52)  
+
+--
+
+### Want to chat and get specific questions answered?
+
+* [Book a live meeting](https://rstudio.chilipiper.com/book/schedule-time-with-rstudio) with us!
+
+--
+
+### Want to try it out, no strings attached?
+
+* [Evaluate RStudio Team](https://www.rstudio.com/products/team/evaluation/) today!
+
