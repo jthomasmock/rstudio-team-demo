@@ -2,9 +2,7 @@
 
 [LIVE Demo + Q&A with Enterprise Data Science Expert](https://www.rstudio.com/resources/build-and-share-data-products-like-the-worlds-leading-companies-with-rstudio-team/)
 
-Thursday, October 7th 11 am - 12 pm EST
-
-(No registration required)
+[RStudio Team Free hosted evaluation](https://www.rstudio.com/products/team/evaluation/)
 
 ### Learn How RStudio Team Can...
 
